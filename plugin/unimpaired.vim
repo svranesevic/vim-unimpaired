@@ -27,7 +27,7 @@ function! s:Map(...) abort
     endwhile
   endif
   if head !=# '<skip>' && empty(maparg(head.tail, mode))
-    return mode.'map ' . flags . ' ' . head.tail . ' ' . rhs
+    return mode.'map ' . flags . ' ' . '<silent>' . head.tail . ' ' . rhs
   endif
   return ''
 endfunction
